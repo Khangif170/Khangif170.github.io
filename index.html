@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stellar — Modern Single-Page Website</title>
+  <meta name="description" content="A modern, responsive, accessible single-page website with animations, dark mode, portfolio and contact form." />
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Theme color for mobile -->
+  <meta name="theme-color" content="#0b1224">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Stellar homepage">
+        <!-- Inline SVG Logo -->
+        <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#2be7d1"/></linearGradient></defs>
+          <circle cx="12" cy="12" r="10" fill="url(#g)"></circle>
+          <path d="M7 12l3 3 7-7" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        <span class="brand-name">Stellar</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation" id="nav" role="navigation">
+        <ul class="nav-list">
+          <li><a href="#home" data-nav>Home</a></li>
+          <li><a href="#features" data-nav>Features</a></li>
+          <li><a href="#portfolio" data-nav>Portfolio</a></li>
+          <li><a href="#pricing" data-nav>Pricing</a></li>
+          <li><a href="#contact" data-nav>Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="btn btn-ghost" aria-pressed="false" title="Toggle dark mode">🌙</button>
+        <button id="menuToggle" class="hamburger" aria-expanded="false" aria-controls="nav" aria-label="Toggle menu">
+          <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 class="hero-title">Beautiful websites — built fast.</h1>
+          <p class="lead">I design and develop performant, accessible web experiences that scale. Modern UI, minimal CSS, and thoughtful interactions.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#portfolio">See Portfolio</a>
+            <a class="btn btn-outline" href="#contact">Start Project</a>
+          </div>
+        </div>
+        <div class="hero-media" aria-hidden="true">
+          <!-- Decorative mockup card -->
+          <div class="mockup">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="" loading="lazy">
+            <div class="mockup-accent"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="section-title">Features</h2>
+        <p class="section-sub">Everything you need in a modern frontend: accessible markup, fast load, responsive layout, and delightful micro-interactions.</p>
+
+        <div class="grid feat-grid">
+          <article class="card feature">
+            <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z" fill="currentColor"></path></svg>
+            <h3>Pixel-perfect UI</h3>
+            <p>Responsive components, consistent spacing, and typography tuned for readability on all devices.</p>
+          </article>
+
+          <article class="card feature">
+            <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3V6zm2 7h14v2H5v-2zM9 18h6v2H9v-2z" fill="currentColor"></path></svg>
+            <h3>Performance-first</h3>
+            <p>Optimized images, minimal DOM, and light JavaScript for snappy interactions and good Core Web Vitals.</p>
+          </article>
+
+          <article class="card feature">
+            <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Accessibility</h3>
+            <p>Semantic HTML, keyboard navigation, and ARIA where needed — built to be usable by everyone.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section bg-soft">
+      <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+        <p class="section-sub">A few selected projects. Click a card to view details.</p>
+
+        <div class="portfolio-filter">
+          <label class="sr-only" for="filter">Filter projects</label>
+          <select id="filter" aria-label="Filter projects">
+            <option value="all">All</option>
+            <option value="web">Websites</option>
+            <option value="apps">Apps</option>
+            <option value="branding">Branding</option>
+          </select>
+        </div>
+
+        <div class="grid portfolio-grid" id="portfolioGrid">
+          <!-- Card 1 -->
+          <article class="card project" data-type="web" tabindex="0" role="button" aria-pressed="false">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1523475496153-3d6cc1a2a0f6?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="Project: Dashboard UI" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>Dashboard UI</h3>
+              <p class="muted">Enterprise analytics dashboard — performance first.</p>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card project" data-type="apps" tabindex="0" role="button" aria-pressed="false">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="Project: Mobile App" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>FinTrack App</h3>
+              <p class="muted">Mobile-first finance tracking with offline sync.</p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card project" data-type="branding" tabindex="0" role="button" aria-pressed="false">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="Project: Brand Kit" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>Brand Identity</h3>
+              <p class="muted">Logo and visual system for a startup.</p>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card project" data-type="web" tabindex="0" role="button" aria-pressed="false">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="Project: Marketing Site" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>Marketing Site</h3>
+              <p class="muted">Conversion-focused landing pages and A/B testing design.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX (hidden by default) -->
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+      <button id="lbClose" class="lb-close" aria-label="Close preview">✕</button>
+      <div class="lb-content" id="lbContent">
+        <img src="" alt="" id="lbImage" loading="eager">
+        <div class="lb-meta">
+          <h3 id="lbTitle"></h3>
+          <p id="lbDesc"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICING -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2 class="section-title">Pricing</h2>
+        <p class="section-sub">Simple and transparent. Choose a plan that fits your needs.</p>
+
+        <div class="grid price-grid">
+          <article class="card price-card">
+            <h3>Starter</h3>
+            <p class="price">₹15,000<span>/one-off</span></p>
+            <ul class="benefits">
+              <li>Landing page</li>
+              <li>Responsive design</li>
+              <li>Basic SEO</li>
+            </ul>
+            <a class="btn btn-primary" href="#contact">Get started</a>
+          </article>
+
+          <article class="card price-card popular">
+            <div class="badge">Popular</div>
+            <h3>Pro</h3>
+            <p class="price">₹45,000<span>/project</span></p>
+            <ul class="benefits">
+              <li>Multi-page site</li>
+              <li>Performance & accessibility checks</li>
+              <li>2-week support</li>
+            </ul>
+            <a class="btn btn-primary" href="#contact">Contact sales</a>
+          </article>
+
+          <article class="card price-card">
+            <h3>Enterprise</h3>
+            <p class="price">Custom<span>/custom</span></p>
+            <ul class="benefits">
+              <li>Design system</li>
+              <li>Integration & APIs</li>
+              <li>Dedicated support</li>
+            </ul>
+            <a class="btn btn-outline" href="#contact">Request quote</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section bg-soft">
+      <div class="container contact-grid">
+        <div class="contact-card card">
+          <h2>Get in touch</h2>
+          <p class="muted">Tell me about your project and timeline. I'll respond within 48 hours.</p>
+
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" required minlength="2" placeholder="Jane Doe">
+              <span class="form-error" id="errName" aria-live="polite"></span>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@company.com">
+              <span class="form-error" id="errEmail" aria-live="polite"></span>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required minlength="10" placeholder="Describe your project..."></textarea>
+              <span class="form-error" id="errMessage" aria-live="polite"></span>
+            </div>
+
+            <div class="form-row form-actions">
+              <button type="submit" class="btn btn-primary">Send message</button>
+              <button type="reset" class="btn btn-ghost">Reset</button>
+            </div>
+
+            <div id="formMessage" class="form-success" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <aside class="info card">
+          <h3>Contact info</h3>
+          <p>Email: <a href="mailto:hello@stellar.example">hello@stellar.example</a></p>
+          <p>Location: Karachi, Pakistan</p>
+          <h4>Follow</h4>
+          <p class="socials">
+            <a href="#" aria-label="Twitter">Twitter</a> ·
+            <a href="#" aria-label="GitHub">GitHub</a> ·
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          </p>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Stellar — Built with ❤️ and modern CSS.</p>
+      <p class="muted">Designed to be accessible and performant.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
