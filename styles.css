@@ -5,14 +5,15 @@
 
 /* ---------- Variables ---------- */
 :root{
-  --bg: #0b1224;
-  --card: #0f1724;
-  --muted: #99a0b8;
-  --text: #e6eef8;
-  --accent-1: #7c5cff;
-  --accent-2: #2be7d1;
-  --glass: rgba(255,255,255,0.03);
+  --bg: #0b0b0b;
+  --card: #111111;
+  --muted: #c9bfa6;
+  --text: #fff7e6;
+  --accent-1: #d4af37;   /* gold */
+  --accent-2: #f3e7c6;   /* light gold */
+  --container: 1100px;
   --radius: 12px;
+}
   --container: 1100px;
   --gap: 1.25rem;
   --ease: cubic-bezier(.2,.9,.25,1);
